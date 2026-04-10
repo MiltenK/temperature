@@ -1,15 +1,14 @@
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.Scanner;
-import java.util.Arrays;
-
 public class Main {
     public static void main(String[] args) {
 
 
 //        int dayCount = Integer.parseInt(arr[0]) + 1;
 
+        int maxi = getMaxDuration();
+        System.out.println(maxi);
+    }
+
+    private static int getMaxDuration() {
         int[] degree = convertToInts();
         int maxi = 0;
         int count = 0;
@@ -24,8 +23,9 @@ public class Main {
                 }
             }
         }
-        System.out.println(maxi);
+        return maxi;
     }
+
     public static int[] convertToInts(){
         String[] arr = ArrayReader.execute();
         int[] degree = new int[arr.length - 1];
