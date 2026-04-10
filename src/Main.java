@@ -7,7 +7,7 @@ public class Main {
         int maxi = getMaxDuration();
         System.out.println(maxi);
     }
-
+//kjhjkhkh
     private static int getMaxDuration() {
         int[] degree = convertToInts();
         int maxi = 0;
