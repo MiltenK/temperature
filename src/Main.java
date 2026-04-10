@@ -6,14 +6,11 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        String[] arr = ArrayReader.execute();
 
-        int dayCount = Integer.parseInt(arr[0]) + 1;
 
-        int[] degree = new int[arr.length - 1];
-        for (int i = 1; i < arr.length; i++) {
-            degree[i - 1] = Integer.parseInt(arr[i]);
-        }
+//        int dayCount = Integer.parseInt(arr[0]) + 1;
+
+        int[] degree = convertToInts();
         int maxi = 0;
         int count = 0;
         for (int i = 0; i < degree.length; i++) {
@@ -28,5 +25,13 @@ public class Main {
             }
         }
         System.out.println(maxi);
+    }
+    public static int[] convertToInts(){
+        String[] arr = ArrayReader.execute();
+        int[] degree = new int[arr.length - 1];
+        for (int i = 1; i < arr.length; i++) {
+            degree[i - 1] = Integer.parseInt(arr[i]);
+        }
+        return degree;
     }
 }
